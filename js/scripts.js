@@ -5,17 +5,17 @@ let pokemonList = [
         type: ['grass', 'poison']
     },
     {
-        name: "Charizard",
+        name: 'Charizard',
         height: 1.7,
         type: ['fire', 'flying']
     },
     {
-        name: "Torchic",
-        height: 0.4,
-        type: 'fire'
+        name: 'Slowking',
+        height: 2,
+        type: ['psychic', 'water']
     },
     {
-        name: "Rhydon",
+        name: 'Rhydon',
         height: 1.9,
         type: ['frock', 'ground']
     }
