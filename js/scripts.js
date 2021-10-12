@@ -24,7 +24,7 @@ let pokemonList = [
 for (let i = 0; i < pokemonList.length; i++)  {
     document.write(pokemonList[i].name + ' (Height: ' + pokemonList[i].height+')'); // Writes pokemon names and heights on website's DOM
 
-     if (pokemonList[i].height > 1.9)  {
+    if (pokemonList[i].height > 1.9)  {
       document.write(' - Wow, that\'s big!'); //adding code to highlight big pokemons in the list
     }
     document.write('<ul></ul>'); // showing pokemons under unordered list
