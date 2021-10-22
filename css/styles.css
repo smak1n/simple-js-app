@@ -26,3 +26,27 @@ body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
 }
+
+.button-class {
+  width: 130px;
+  background-color: green;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid lightseagreen;
+}
+
+.pokemon-list {
+  list-style-type: none;
+}
