@@ -39,9 +39,30 @@ let pokemonRepository = (function () {
         }
     }
 
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemon-list"); // Selecting pokemon-list class from html
+        let listpokemon = document.createElement("li"); // creating list items
+        let button = document.createElement("button");  //creating button
+        button.innerText = pokemon.name;  // assigning inner text of the button to show pokemons
+        button.classList.add("button-class"); //adding styles from styles.css to the newly created button
+  
+        button.addEventListener('click', function(){ //adding Event listener to the button when clicked
+          showDetails(pokemon);
+        });
+  
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+      }
+  
+      function showDetails(pokemon) { //creating function to show more details about pokemon when clicked
+        console.log(pokemon);
+      }
+
     return {
         getAll: getAll,
-        add: add
+        add: add,
+        addListItem: addListItem,
+        showDetails: showDetails
     };
 })();
 
@@ -50,12 +71,8 @@ pokemonRepository.add({name: 'Natu', height:0.08 , type: ['Psychic', 'Flying']})
 console.log(pokemonRepository.getAll());
 
 //Using forEach() function instead of the 'for' loop function // Outside of the IIFE
-function myPokemonRepository(pokemon) {
-    document.write('<p>' + pokemon.name + ' (Height:' + pokemon.height + ')');
-      if (pokemon.height > 1.9) {
-        document.write(' - Wow, that\'s big!');
-      }
-        document.write('</p>')
-}
-pokemonRepository.getAll().forEach(myPokemonRepository);
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
 
