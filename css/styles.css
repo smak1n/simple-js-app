@@ -1,16 +1,16 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-  }
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
 
 button:hover, button:focus, .button:hover, .button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 50% */
-    opacity: 0.5;
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 50% */
+  opacity: 0.5;
 }
 
 html {
