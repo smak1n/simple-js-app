@@ -46,9 +46,9 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;  // assigning inner text of the button to show pokemons
     button.classList.add("button-class"); //adding styles from styles.css to the newly created button
   
-      button.addEventListener('click', function(){ //adding Event listener to the button when clicked
-        showDetails(pokemon);
-      });
+    button.addEventListener('click', function(){ //adding Event listener to the button when clicked
+      showDetails(pokemon);
+    });
   
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
