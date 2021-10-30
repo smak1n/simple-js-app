@@ -39,7 +39,7 @@ let pokemonRepository = (function () {
     }).then(function (json) {
       json.results.forEach(function (item) {
         let pokemon = {
-          name: item.name,
+          name: item.name.toUpperCase(),
           detailsUrl: item.url
         };
         add(pokemon);
@@ -84,7 +84,7 @@ let pokemonRepository = (function () {
     closeButtonElement.addEventListener('click', hideModal);
 
     let titleElement = document.createElement('h1');
-    titleElement.innerText = pokemon.name;
+    titleElement.innerText = pokemon.name.toUpperCase();
 
     let heightElement = document.createElement('p');
     heightElement.innerText = 'Height: ' + pokemon.height;
@@ -106,7 +106,7 @@ let pokemonRepository = (function () {
     modalContainer.classList.remove('is-visible');
   }
 
-  //By pressing ESC key from keyboard to close modal
+  // Adding eventListener to listen for pressing ESC key from keyboard to close modal
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
       hideModal();
