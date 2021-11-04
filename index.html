@@ -4,15 +4,57 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Simple JS App</title>
     </head>
     <body>
+        <header>
+            <!--- Navbar and search bar --->
+            <nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color:black">
+              <a href="index.html" class="navbar-brand">
+                <img src="img/50x50.png" alt="pokedex logo">Pokedex App
+                <span class="sr-only sr-only-focusable">Pokemon icon on the navigation bar, when clicked reloads the page</span>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only sr-only-focusable">Toggle function for navigation button</span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content:flex-end">
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" id="filter" type="search" placeholder="Pokemon search" aria-label="Search">
+                </form>
+              </div>
+            </nav>
+            <!-- Navbar and search bar end -->
+        </header>
+          <!-- Pokemon list -->
+        <div class="container-fluid">
         <h1>Pokedex</h1>
-        <ul class="pokemon-list"></ul>
-        <div id="modal-container"></div>
-        <script src="js/promise-polyfill.js"></script>
-        <script src="js/fetch-polyfill.js"></script>
-        <script src="js/scripts.js"></script>
+        <ul class="group-list row justify-content-center"></ul>
+        </div>
+        <!-- Pokemon list End -->
+        <!-- Bootstrap Modal start -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokeModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <span class="sr-only sr-only-focusable">Modal which contains details about pokemons</span>
+            <div class="modal-header">
+              <h5 class="modal-title" id="pokemonModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal end -->
+      <!-- Boostrap links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- End -->        
+    <script src="js/scripts.js"></script>
     </body>
 </html>
