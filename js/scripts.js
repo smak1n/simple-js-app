@@ -52,8 +52,9 @@ let pokemonRepository = (function () {
   
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
-
-    button.addEventListener('click', function(){ //adding Event listener to the button when clicked
+    
+    //adding Event listener to the button when clicked
+    button.addEventListener('click', function(){ 
       showDetails(pokemon);
     });
   }
@@ -90,8 +91,8 @@ let pokemonRepository = (function () {
       console.error(e);
     });
   }
-
-  function showDetails(pokemon) { //creating function to show more details about pokemon when clicked
+  //creating function to show more details about pokemon when clicked
+  function showDetails(pokemon) { 
     loadDetails(pokemon).then(function() {
       showModal(pokemon);
     });
