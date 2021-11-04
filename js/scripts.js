@@ -38,7 +38,7 @@ let pokemonRepository = (function () {
     // Selecting pokemon-list class from html
     let pokemonList = document.querySelector('.group-list');
     // creating list items
-    let listItem = document.createElement("li");
+    let listItem = document.createElement('li');
     listItem.classList.add('group-list-item','col-xl-2','col-lg-3','col-md-4','col-8');
     //creating button 
     let button = document.createElement('button');
@@ -47,8 +47,8 @@ let pokemonRepository = (function () {
     //adding class for button
     button.classList.add('btn', 'btn-primary');
 
-    button.setAttribute("data-target", "#pokemonModal");
-    button.setAttribute("data-toggle", "modal");
+    button.setAttribute('data-target', '#pokemonModal');
+    button.setAttribute('data-toggle', 'modal');
   
     listItem.appendChild(button);
     pokemonList.appendChild(listItem);
