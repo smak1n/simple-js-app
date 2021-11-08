@@ -108,11 +108,11 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty();
 
-    let titleElement = document.createElement('h5');
-    titleElement.innerText = pokemon.name;
+    let titleElement = document.querySelector('#pokemonModalLabel');
+    titleElement.innerText = `${pokemon.name}`;
 
     let heightElement = document.createElement('p');
-    heightElement.innerText = 'Height: ' + pokemon.height + 'm';
+    heightElement.innerText = `Height: ${pokemon.height}m`;
 
     let pokemonTypes = [];
     Object.keys(pokemon.types).forEach(key => {
@@ -120,7 +120,7 @@ let pokemonRepository = (function () {
     });
 
     let typesElement = document.createElement('p');
-    typesElement.innerText = 'Types: ' + ' ' + pokemonTypes;
+    typesElement.innerText = `Types: ${pokemonTypes}`;
     typesElement.classList.add('types-element');
 
     let pokemonAbilities = [];
@@ -129,7 +129,7 @@ let pokemonRepository = (function () {
     });
 
     let abilitiesElement = document.createElement('p');
-    abilitiesElement.innerText = 'Abilities: ' + pokemonAbilities;
+    abilitiesElement.innerText = `Abilities: ${pokemonAbilities}`;
     abilitiesElement.classList.add('abilities-element');
 
     let imageElement = document.createElement('img');
