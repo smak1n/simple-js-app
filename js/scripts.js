@@ -99,8 +99,6 @@ let pokemonRepository = (function () {
   }
 
   //showModal function
-  let modalContainer = document.querySelector('#pokemonModal');
-
   function showModal(pokemon) {
     let modalTitle = $('.modal-title');
     let modalBody = $('.modal-body');
@@ -135,7 +133,7 @@ let pokemonRepository = (function () {
     let imageElement = document.createElement('img');
     imageElement.classList.add('pokeImage');
     imageElement.src = pokemon.imageUrl;
-
+    
     modalTitle.append(titleElement);
     modalBody.append(heightElement);
     modalBody.append(typesElement);
