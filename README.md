@@ -3,7 +3,7 @@
 ## Objective:
 
 * To build a small web application with HTML, CSS, and JavaScript that loads data from an
-  external API and enables the viewing of data points in detail.
+  external API and enables the viewing of data points in detail of 150 Pokemons
 
 ##  User Goals
 
@@ -12,6 +12,13 @@
 ## Key Features
 
 * Load data from an external source (API)
-* View a list of items
-* On user action (by clicking on a list item), view details for that item
+* View a list of Pokemons
+* On user action (by clicking on a list item), view details for the Pokemon
 
+## Technologies used
+
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Bootstrap 4.3.1
