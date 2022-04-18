@@ -1,5 +1,8 @@
 # JavaScript App (Pokédex)
 
+## Demo
+[PokeDex](https://smak1n.github.io/simple-js-app/)
+
 ## Objective:
 
 * To build a small web application that loads data from an
